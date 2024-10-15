@@ -4,6 +4,7 @@
 .venv
 **/__pycache__
 **/*.pyc
+backend/data/database.sqlite
 
 # Frontend
 node_modules
