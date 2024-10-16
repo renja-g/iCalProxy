@@ -71,7 +71,7 @@ function Dashboard() {
     if (icalData) {
       setIcalUrl(icalData.ical_url);
       if (currentUser) {
-        setProxyUrl(`localhost:8000/api/v1/proxy/${currentUser.id}`); // TODO: Update with actual proxy URL
+        setProxyUrl(`${import.meta.env.VITE_BACKEND_HOST}/api/v1/proxy/${currentUser.id}`);
       }
     } else {
       setProxyUrl('');
