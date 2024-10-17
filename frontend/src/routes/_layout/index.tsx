@@ -71,7 +71,7 @@ function Dashboard() {
     if (icalData) {
       setIcalUrl(icalData.ical_url);
       if (currentUser) {
-        setProxyUrl(`${import.meta.env.VITE_BACKEND_HOST}/api/v1/proxy/${currentUser.id}`);
+        setProxyUrl(`${import.meta.env.EXTERNAL_BACKEND_HOST || "localhost:8000"}/api/v1/proxy/${currentUser.id}`);
       }
     } else {
       setProxyUrl('');
